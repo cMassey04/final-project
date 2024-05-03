@@ -1,7 +1,7 @@
 export const Sophmore = () => {
     return (
       <div>
-        <h1>Hello World</h1>
+        <h1>Sophmore Page</h1>
       </div>
     );
   }
