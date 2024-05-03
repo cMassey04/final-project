@@ -18,7 +18,7 @@ const HomePage = () => {
 
   const handleClick = async (e) => {
     e.preventDefault();
-    switch (credentials) {
+    switch (credentials.classification) {
       case 'freshman':
         navigate('/freshman');
         break;
@@ -55,10 +55,15 @@ const HomePage = () => {
     <div>
       <h1>Welcome to HCSC 418 Full Stack Development Final Project</h1>
       <h3>By: Jeremy Samuel & John Massey</h3>
-      <video width="640" height="480" controls>
-        <source src="/videos/my-video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <iframe
+        width="640"
+        height="360"
+        src="https://www.youtube.com/embed/6YEAFkkYzVE" // Replace VIDEO_ID with your YouTube video ID
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
       <br></br>
       <div className="register">
         <div className="rContainer">
