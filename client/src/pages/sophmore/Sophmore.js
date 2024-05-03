@@ -27,7 +27,7 @@ const resources = {
 // The Sophmore component
 export const Sophmore = () => {
   return (
-    <div style={{ textAlign: 'left' }}>
+    <div style={{ textAlign: 'center' }}>
       <h1>Sophmores, Welcome to Year 2! You are Half Way There!</h1>
     </div>
   );
@@ -36,7 +36,10 @@ export const Sophmore = () => {
 // Main component that includes Sophmore and additional resources
 const MainComponent = () => {
   return (
-    <div style={{ textAlign: 'left' }}>
+    <div style={{ textAlign: 'center' }}>
+      {/* Image at the top of the page */}
+      <img src="https://images.vexels.com/media/users/3/223393/isolated/preview/94bc97edecf40ae4044f08fda259b3c1-sophomore-year-first-day-lettering.png" alt="Top Banner" style={{ width: '50%', height: 'auto' }} />
+
       <Sophmore />
       <div className="resources">
         <h2>Courses to Take</h2>
@@ -51,6 +54,9 @@ const MainComponent = () => {
         <h2>Clubs/Extracurriculars</h2>
         <ul>{resources.clubs.map(club => <li key={club}>{club}</li>)}</ul>
       </div>
+
+      {/* Image at the bottom of the page */}
+      <img src="https://zfcphp.arizona.edu/sites/default/files/images/nsy.png" alt="Bottom Banner" style={{ width: '50%', height: 'auto' }} />
     </div>
   );
 }

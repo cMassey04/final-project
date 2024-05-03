@@ -27,7 +27,7 @@ const resources = {
 // The Freshman component
 export const Freshman = () => {
   return (
-    <div style={{ textAlign: 'left' }}>
+    <div style={{ textAlign: 'center' }}>
       <h1>Freshman . . . Welcome to Your FIRST YEAR!!!!</h1>
     </div>
   );
@@ -36,7 +36,10 @@ export const Freshman = () => {
 // Main component that includes Freshman and additional resources
 const MainComponent = () => {
   return (
-    <div style={{ textAlign: 'left' }}>
+    <div style={{ textAlign: 'center' }}>
+      {/* Image at the top of the page */}
+      <img src="https://upload.wikimedia.org/wikipedia/en/1/1f/Welcome_Freshman.jpg" alt="Top Banner" style={{ width: '50%', height: 'auto' }} />
+
       <Freshman />
       <div className="resources">
         <h2>Courses to Take</h2>
@@ -51,6 +54,9 @@ const MainComponent = () => {
         <h2>Clubs/Extracurriculars</h2>
         <ul>{resources.clubs.map(club => <li key={club}>{club}</li>)}</ul>
       </div>
+
+      {/* Image at the bottom of the page */}
+      <img src="https://zfcphp.arizona.edu/sites/default/files/images/nsy.png" alt="Bottom Banner" style={{ width: '50%', height: 'auto' }} />
     </div>
   );
 }

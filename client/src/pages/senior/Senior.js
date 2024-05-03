@@ -27,7 +27,7 @@ const resources = {
 // The Senior component
 export const Senior = () => {
   return (
-    <div style={{ textAlign: 'left' }}>
+    <div style={{ textAlign: 'center' }}>
       <h1>Seniors, It's your last year. Congratulations!</h1>
     </div>
   );
@@ -36,7 +36,10 @@ export const Senior = () => {
 // Main component that includes Senior and additional resources
 const MainComponent = () => {
   return (
-    <div style={{ textAlign: 'left' }}>
+    <div style={{ textAlign: 'center' }}>
+      {/* Image at the top of the page */}
+      <img src="https://firewolfcounseling.weebly.com/uploads/3/1/6/4/31646813/546847_orig.jpg" alt="Top Banner" style={{ width: '50%', height: 'auto' }} />
+
       <Senior />
       <div className="resources">
         <h2>Courses to Take</h2>
@@ -51,6 +54,9 @@ const MainComponent = () => {
         <h2>Clubs/Extracurriculars</h2>
         <ul>{resources.clubs.map(club => <li key={club}>{club}</li>)}</ul>
       </div>
+
+      {/* Image at the bottom of the page */}
+      <img src="https://zfcphp.arizona.edu/sites/default/files/images/nsy.png" alt="Bottom Banner" style={{ width: '50%', height: 'auto' }} />
     </div>
   );
 }
