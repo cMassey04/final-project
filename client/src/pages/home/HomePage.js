@@ -20,28 +20,63 @@ const HomePage = () => {
     e.preventDefault();
     switch (credentials) {
       case 'freshman':
-        navigate('/freshman');
+        try {
+          const res = await axios.post(
+            "http://localhost:4000/auth/register",
+            updatedCredentials
+          );
+          //console.log(res.data)
+          navigate('/freshman');
+        } catch (error) {
+          console.error(error);
+        }
         break;
       case 'sophmore':
-        navigate('/sophmore');
+        try {
+          const res = await axios.post(
+            "http://localhost:4000/auth/register",
+            updatedCredentials
+          );
+          //console.log(res.data)
+          navigate('/sophmore');
+        } catch (error) {
+          console.error(error);
+        }
         break;
       case 'junior':
-        navigate('/junior');
+        try {
+          const res = await axios.post(
+            "http://localhost:4000/auth/register",
+            updatedCredentials
+          );
+          //console.log(res.data)
+          navigate('/junior');
+        } catch (error) {
+          console.error(error);
+        }
         break;
       case 'senior':
-        navigate('/senior');
+        try {
+          const res = await axios.post(
+            "http://localhost:4000/auth/register",
+            updatedCredentials
+          );
+          //console.log(res.data)
+          navigate('/senior');
+        } catch (error) {
+          console.error(error);
+        }
         break;
       default:
         alert('Invalid input. Please enter Freshman, Sophmore, Junior, or Senior.');
     }
     const updatedCredentials = {
       ...credentials,
-      isHost: false,
     };
 
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/auth/register",
+        "http://localhost:4000/auth/register",
         updatedCredentials
       );
       //console.log(res.data)
