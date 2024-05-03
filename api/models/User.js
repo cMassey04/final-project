@@ -14,7 +14,7 @@ const UserSchema = new mongoose.Schema(
       type: String,
     },
     classification: {
-      type: Number,
+      type: String,
       required: true,
     },
     isAdmin: {

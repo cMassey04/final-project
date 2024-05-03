@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import authRoute from "./routes/auth.js"
 import cookieParser from "cookie-parser"
+import cors from "cors"
 
 const app = express();
 dotenv.config()
@@ -23,8 +24,10 @@ mongoose.connection.on("disconnected", () => {
 
 // middlewares
 app.use(express.json());
+app.use(cors()); // Enable Cross-Origin Resource Sharing
 app.use("/auth", authRoute)
 app.use(cookieParser())
+
 
 
 app.listen(4000, ()=> {
