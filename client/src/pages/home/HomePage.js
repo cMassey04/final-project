@@ -16,6 +16,10 @@ const HomePage = () => {
     setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
   };
 
+  const handleLoginClick = () => {
+    navigate('/login'); // Navigate to the login route
+  };
+
   const handleClick = async (e) => {
     e.preventDefault();
 
@@ -52,10 +56,17 @@ const HomePage = () => {
     
   };
 
+  // add login and logout *
+  // block users from going to other pages * (calls called private routes)
+  // look at music example in book (in routing chapter)
+  // calls called private routes vs session storgage
+  // docker file
+  // readme file to turn everything on
+
   return (
     <div>
       <h1>Welcome to HCSC 418 Full Stack Development Final Project</h1>
-      <h3>By: Jeremy Samuel & John Massey</h3>
+      <h2>By: Jeremy Samuel & John Massey</h2>
       <iframe
         width="640"
         height="360"
@@ -65,6 +76,7 @@ const HomePage = () => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>
+      <br></br>
       <br></br>
       <div className="register">
         <div className="rContainer">
@@ -111,6 +123,8 @@ const HomePage = () => {
           </button>
         </div>
       </div>
+      <h4>Already have an account?</h4>
+      <button onClick={handleLoginClick}>Login</button>
     </div>
   );
 };
